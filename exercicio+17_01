@@ -1,0 +1,5 @@
+nome = prompt('Digite seu nome: ')
+salario = Number(prompt('Digite seu salario: '))
+vendas = Number(prompt('Digite suas vendas: '))
+salario_bruto = salario + (vendas * 0.15)
+alert(`O saalrio de ${nome} foi de R$ ${salario_bruto.toFixed(2)}`)
