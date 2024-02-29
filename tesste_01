@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(7, 253, 7);
+            background: black;
+        }
+
+        img {border-radius: 50%;
+        height: 100px;
+        weight 100px;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <img src="foto eugenio.jpg" alt=""> 
+    </figure>
+
+    <h1>Eugenio Boudaher Rocha</h1>
+    <p>Telefone: xxxx-xxxx</p>
+    <hr>
+    <h2>Objetivo</h2>
+    <p>Desenvolvedor</p>
+    <h2>Formação Acadêmica</h2>
+    <ul>
+        <li>Engenharia de Software - cursando - segundo semestre - UNIFANOR</li>
+    </ul>
+    <h2>Experiência profissional</h2>
+    <u>
+        <li>Coordenador Escola de Inglês X 2024 - Atual</li>
+        <li>Professor de Inglês na escola X 2018 a 2023</li>
+        <li>Professor de Inglês na escola Y 2000 a 2018</li>
+    </u>
+    <h2>Cursos e especializações</h2>
+    <u>
+        <li>Full Stack (HTML. CSS, Javascript e Python - Infinity school - cursando</li>
+        <li>Python do básico ao avançado - Udemy - cursando</li>
+        <li>Selenium do básico ao avançado - Udemy - cursando</li>
+    </u>
+    
+</body>
+</html>
