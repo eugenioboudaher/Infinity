@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2</title>
+    <style>
+        body {font-family: Verdana, Geneva, Tahoma, sans-serif;
+              color: yellowgreen;
+              background: black;}
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Formulário exercício 2</h1>
+        </header>
+        <form>
+            <label for="name">Nome</label>
+            <input type="text" name="name">
+            <br><br>
+            <label for="endereco">Endereço</label>
+            <input type="text" name="endereco">
+            <br><br>
+            <label for="password">Senha</label>
+            <input type="password">
+            <br><br>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" placeholder="xxxxxxxx@email.com.br">
+            <br><br>
+            <label for="casado">Casado?</label>
+            <input type="checkbox" name="casado">
+            <br><br>
+            <label for="graduado">Graduado?</label>
+            <input type="checkbox" name="graduado">
+            <br><br>
+            <label for="brasileiro">Brasileiro?</label>
+            <input type="checkbox" name="brasileiro">
+            <br><br>
+            <label for="maior">Maior de idade?</label>
+            <input type="checkbox" name="maior">
+            <br><br>
+            <label for="fortalezense">Cearense?</label>
+            <input type="checkbox" name="casado">
+            <br><br>
+            <h2>Veja sua cor favorita</h2>
+            <input type="radio" id="cor-vermelha" name="cor" value="vermelho">
+            <label for="cor-vermelha">Vermelho</label><br>
+        
+            <input type="radio" id="cor-verde" name="cor" value="verde">
+            <label for="cor-verde">Verde</label><br>
+        
+            <input type="radio" id="cor-azul" name="cor" value="azul">
+            <label for="cor-azul">Azul</label><br>
+        
+            <input type="radio" id="cor-amarela" name="cor" value="amarelo">
+            <label for="cor-amarela">Amarelo</label><br>
+
+            <br><br>
+            <input type="submit">
+            <input type="reset">
+
+        </form>
+    </main>    
+</body>
+</html>
