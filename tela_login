@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .headings {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+        }
+
+        #botoes input {
+            background: red;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        #botoes {
+            display: flex;
+            justify-content: center;
+        }
+
+        #senha_esqueceu a {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <img src="images/infinityschool_logo.jpeg" alt="" width="100">
+    </figure>
+    <header class="headings">
+        <h1>Tela de Login</h1>
+    </header>
+    <form>
+        <label for="name">Nome:</label>
+        <input type="text" name="name">
+    </form>
+    <br><br>
+    <form action="">        
+        <label for="password">Password:</label><br>
+        <input type="text" name="name">
+    </form>
+    <br><br>
+    <div id="botoes">
+        <input type="submit" value="Entrar">
+    </div>
+    <div id="senha_esqueceu">
+        <a href="#">Esqueceu a senha</a>
+    </div>
+ 
+
+    
+</body>
+</html>
