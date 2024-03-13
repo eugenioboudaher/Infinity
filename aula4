@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            border-radius: 10px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #palmeiras {
+            background: #016436;
+            text-align: center;
+        }
+
+        #inter {
+            background: #E12B2D;
+            text-align: center;;
+
+        }
+
+        #flu {
+            background: linear-gradient(to right, red, green);
+            text-align: center;
+        }
+
+        #fla {
+            background: linear-gradient(to right, red, black);
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+       <h1>Brasileirão 2022</h1> 
+       <p>Curiosidades sobre o g4</p>
+    </header>
+    <section>
+        <div id="palmeiras">
+            <h2>1º Palmeiras</h2>
+            <p>Estado: São Paulo <br>
+                Estádio: Allianz Parque <br>
+                Maiores títulos: Libertadores <br>
+                Curiosidade: Time da colônia italiana
+            </p>
+        </div>
+    </section>
+    <section>
+        <div id="inter">
+            <h2>2º Internacional</h2>
+            <p>Estado: Rio Grande do Sul <br>
+                Estádio: Beira Rio<br>
+                Maiores títulos: Mundial <br>
+                Curiosidade: O macote é o Saci-Pererê
+            </p>
+        </div>
+    </section>
+    <section>
+        <div id="flu">
+            <h2>3º Fluminense</h2>
+            <p>Estado: Rio de Janeiro <br>
+                Estádio: Maracanã<br>
+                Maiores títulos: Liberadores <br>
+                Curiosidade: Atual campeão da libertadores
+            </p>
+        </div>
+    </section>
+    <section>
+        <div id="fla">
+            <h2>4º Flamengo</h2>
+            <p>Estado: Rio de Janeiro <br>
+                Estádio: Maracanã<br>
+                Maiores títulos: Liberadores <br>
+                Curiosidade: Maior tocida do Brasil
+            </p>
+        </div>
+    </section>
+    
+</body>
+</html>
