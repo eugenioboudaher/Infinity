@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><img src="images/beer.png" alt="" ><a href="#">Beer</a></li>
+        <li><img src="images/beer.png" alt="" ><a href="#" >Infinity</a></li>
+        <li><img src="images/medal.png" alt="" ><a href="#">Ranking</a></li>
+        <li><img src="images/whatsapp.png" alt="" ><a href="#">Whats app</a></li>
+        <li><img src="images/beer.png" alt="" ><a href="#">Beer</a></li>
+    </ul>
+    
+</body>
+</html>
