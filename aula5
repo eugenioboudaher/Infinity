@@ -3,21 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meus links favoritos</title>
     <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
         .image {
-            width: 50px;
+            width: 25px;
+        }
+        div {
+            background-color: lightgray;
+            width: 200px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        div ul li a {
+            color: black;         
+            text-decoration: none;
+            
+            
+        }
+        ul {
+            list-style-type: none;
         }
     </style>
 </head>
 <body>
-    <ul>
-        <li><img src="images/beer.png" alt="" ><a href="#">Beer</a></li>
-        <li><img src="images/beer.png" alt="" ><a href="#" >Infinity</a></li>
-        <li><img src="images/medal.png" alt="" ><a href="#">Ranking</a></li>
-        <li><img src="images/whatsapp.png" alt="" ><a href="#">Whats app</a></li>
-        <li><img src="images/beer.png" alt="" ><a href="#">Beer</a></li>
-    </ul>
+    <h1>Meus Links Favoritos</h1>
+
+    <div>
+        <ul>
+            <li><img src="https://img.freepik.com/vetores-gratis/aplicativo-do-twitter-novo-logotipo-x-em-fundo-preto_1017-45425.jpg" alt="" class="image"> <a href="https://twitter.com/?lang=pt-br" target="_blank">X (Twitter)</a></li>
+
+            <li><img src="https://cdn.icon-icons.com/icons2/17/PNG/256/social_facebook_fb_2233.png" alt="" class="image"> <a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+
+            <li><img src="https://aulasteatroinfantil.com/wp-content/uploads/2019/01/Instagram-1.png" alt="" class="image"> <a href=https://www.instagram.com/?hl=pt_BR" target="_blank">Instagram</a></li>
+
+            <li><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/b6/8a/a2/b68aa2f4-afe5-c9bc-ff2b-d7f79effef49/AppIcon-0-1x_U007emarketing-0-7-0-85-220-0.png/256x256bb.png" alt="" class="image"> <a href="https://br.linkedin.com/" target="_blank">Linkedin</a></li>
+
+            <li><img src="https://alternative.me/media/256/github-pages-icon-2mp0nr145yiqkw4j-c.png" alt="" class="image"> <a href="https://github.com/eugenioboudaher" target="_blank">Github</a></li>
+        </ul>
+    </div>
     
 </body>
 </html>
