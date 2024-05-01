@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="PT-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Bootstrap projeto final</title>
+    <style>
+        nav {
+          display: flex;
+        }
+        .logo {
+          margin: 10px;
+          width: 50vw;
+          font-weight: bolder;
+
+        }
+        .botao {
+          display: flex;
+          justify-content: flex-end;
+          width: 50vw;
+          margin: 10px;
+        }
+        #login, #trial {
+          margin-left: 20px;
+          height: 30px;
+          width: 120px;
+        }
+        #trial {
+          background-color: #434651;
+          color: white;
+        }#login{
+          color:  #434651;
+        }
+        .cabecalho > #hprincipal {
+          text-align: center;
+          margin-top: 80px;      
+        }
+        .cabecalho > #hsecundario {
+          text-align: center;
+        }
+        h6 {          
+          width: 500px;
+          margin: auto;
+          text-align: center;
+        }
+        .main_buttons {
+          margin: auto;
+          width: 10vw;
+          margin-top: 15px;          
+        }
+        #anual, #monthly {
+          margin-right: -5px;
+        }
+        #monthly {
+          color: white;
+          background-color: #434651;
+        }
+        section {
+          margin-top: 100px;
+        }
+    </style>
+  </head>
+  <body>
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <nav>
+      <div class="logo">Moqups</div>
+      <div class="botao">
+        <button id="login">Log In</button>
+        <button id="trial">Start Free Trial</button>
+      </div>
+    </nav>
+    <header>
+      <div class="cabecalho">
+        <h1 id="hprincipal">Choose a Plan to Grow Your </h1>
+        <h1 id="hsecundario">Business</h1>
+        <h6>Supporting statements for your headline that extends your value proposition and prompts users to select one of your plans</h6>
+      </div>
+    </header>
+    <main>
+      <div class="main_buttons">
+        <button id="monthly">MONTHLY</button>
+        <button id="anual">ANUAL</button>
+      </div>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAmAMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAACAECAwUHBAb/xAA6EAABAwMABQkECQUAAAAAAAAAAQIDBAURBhITITEHNkFRYXF0dbMUkbGyIiMyMzU3coGhFRZFUtH/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAGhEBAQEAAwEAAAAAAAAAAAAAAAECEjFBEf/aAAwDAQACEQMRAD8A7iAAAAAAAAAAABbtGa+prt1/9c7wLgAAAAAAAAAAAAAAAAAAAAAAAc05YNMKyzRU9ptMqw1NSxZJZ2/ajjzhEb1Kq539SKcUdUTrIsqzzLKq52iyKr17dbOcnTuXS0zsuNFeWsc6mdFsJHJwY5FVW578r7jluOjG83npHauR/TGsurp7Ndplnnhj2kE71y9zM4Vrl6cZTf1dfE6gcS5DrRUS3qqu7o3NpYYVha9U3Pe5UVUTrwifydsTgZvaqgAgAAAAAAAAAAAAAAAAGCrqqejppamrmZDDE1XPkeuEanapnOCcrulM91vstogkc2goX6rmou6WTCKqr1omcJ2opZB9PpFytWR7JqOjtb7pC9Fa9Z/q43p3Kiqqfsc7W86NuqNquhzUTOdkl1l1PdqnzoNyI7Ho3ysWSCGKiqbQ+1UzERrPZsSRsTuREX3IdPoq2mrqSOqo52T08rdZkka5a5O8iafdclGlM9mv8Ntmeq26ufqOYq7opF+y5O9cIvei9Bm5VIAAGQAAAAAAAAAAAAAAABRd28ilV61XeqhHuXM1W/Ll6MvX/pK13Aimn44vjV9Q1kVvlvS03mttySLKlLM6LaKmNbHTg8Ju9OOeV78bJ8TSGoj1WmjS4XahoVkWNKqpjgV6JnV13I3OOzIfGtFdnRMdl1PU6qO61a/CL/B6tFedNk8xp/VaYLn+PVnjJPnUCVca5Y1V6UyXFkX3bP0oXnNQAAAAAAAAAAAAAAAFHcCKf+bXxq+oSsXgRcSgq00sWgWnk9q9v1dlqrrfb6urG/PUayMum/PG9+Nk+JpDd6b88b342X4mlwaiNlotzpsnmNP6rTDc/wAdrPGSeopm0X50WXzGm9VpfdKGq/uyqoNhJ7U6ue1sWquVy9cY7OnIEoYvu2fpQvLY0wxqL0JguOagAAAAAAAAAAAAAAABi2EO222yZtcY19VNbHeZQBGDTfnlfPHS/MbKJrV5KKh2qmsl9amcb/ukNZptzxvnjpfmNpF+UtR5630kN+I0mjHOiyeY03qtJRbCFZUlWJiypuR+qmsn7kXNGec9l8xpvVaSoJpQAGQAAAAAAAAAAAAAAAAAKARg01543vx0vzKbSL8pajz1vpIavTXnje/HS/MptIvymqE6f6630kN+I0WjXOazeY03qtJUkVtG+ctm8xpvVaSpJpQAGQAAAAAAAAAAAAAAABZIqom41tXPK3Ork2ipniWPhY7i0DgGmeiN2kv9ZXUNOtTDVyrL9FyZY5eKLntzvM7NHrgmiLrOsf176hKnj9HXRMYz3HcX2+B/Fpj/AKVT5zqJ7i8hwbRTQ67LfKOpraZ1PT0s7JnK5yZcrVRyImO1EO40lRK7CuzvPWy3wN4NM7IGN3I0W/RWJyrxMhREROBUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAscuFT3FUAAIpXpKABncVyAAXoLc8QADVzxCqv8AIAFV4FW9fYUAFwAAAAD/2Q==" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Basic</h5>
+            <p class="card-text">Add a summary of the plan, it´s ket features, its main benefit and its ideal cutomer.</p>
+            <a href="#" class="btn btn-primary">Get started</a>
+          </div>
+        </div>
+            </div>
+            <div class="col-sm">
+              <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="data:image/png;base64,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" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Premium</h5>
+            <p class="card-text">Add a summary of the plan, it´s ket features, its main benefit and its ideal cutomer.</p>
+            <a href="#" class="btn btn-primary">Get started</a>
+          </div>
+        </div>
+            </div>
+            <div class="col-sm">
+              <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-LAe_wTvYKFlhf180jxlY4LRcwuF1tEA5DQ&usqp=CAU" alt="Card image cap">
+          <div class="card-body"><br><br><br><br><br>
+            <h5 class="card-title" style="text-align: center;">Card title</h5>
+            <p class="card-text">Add a summary of the plan, it´s ket features, its main benefit and its ideal cutomer.</p>
+            <a href="#" class="btn btn-primary">Get started</a>
+          </div>
+        </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="card text-center">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Visit our Instagram page</h5>
+          <p class="card-text">There you can find more innovations and videos expalining how to use it</p>
+          <a href="https://www.instagram.com/" class="btn btn-primary">Instagram</a>
+        </div>
+        <div class="card-footer text-muted">
+          2 days ago
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
