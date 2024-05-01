@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var num1 = Number(prompt('Digite o valor'))
+    
+    console.log(`O preço com 10% de desconto é de R$ ${num1 * 0.9}`)
+  </script>
+  
+</body>
+</html>
