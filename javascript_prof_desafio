@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var num1 = Number(prompt('Digite o valor do salário'));
+    var inss = num1 * 0.08;
+    var sind = num1 * 0.05;
+    var renda = num1 * 0.11;
+    var descontos = inss + sind + renda;
+    var sal_liq = num1 - descontos;
+    
+    alert(`O salário bruto foi de R$ ${num1.toFixed(2)}`);
+    alert(`O valor do INSS foi de R$ ${inss.toFixed(2)}`);
+    alert(`O valor do sindicato foi de R$ ${sind.toFixed(2)}`);
+    alert(`O valor do salário liquido foi de R$ ${sal_liq.toFixed(2)}`);
+    alert(`O valor dos descontos foi de R$ ${descontos.toFixed(2)}`);
+
+  </script>
+  
+</body>
+</html>
