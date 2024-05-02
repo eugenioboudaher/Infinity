@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*[JS-A01] Considere três notas (n1, n2, n3) e seus respectivos pesos (p1, p2, p3). Calcule a média ponderada das notas e atribua o resultado à variável "media". Após o cálculo, exiba a média ponderada no console.
+
+OBS: Para calcular a média ponderada multiplica os valores das notas pelos valores dos pesos, e divide pelas somas de todos os pesos. Lembre-se de declarar valores para os pesos e para as notas.*/
+
+    
+    var nota1 = Number(prompt('Digite a nota 1:'))
+    var nota2 = Number(prompt('Digite a nota 2:'))
+    var nota3 = Number(prompt('Digite a nota 3:'))
+
+    var peso1 = Number(prompt('Digite o peso 1:'))
+    var peso2 = Number(prompt('Digite o peso 2:'))
+    var peso3 = Number(prompt('Digite o peso 3:'))
+
+    var somaProdutos = (nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3);
+    var somaPesos = peso1 + peso2 + peso3;
+    var mediaPonderada = somaProdutos / somaPesos;
+    alert(mediaPonderada)
+  </script>
+  
+</body>
+</html>
