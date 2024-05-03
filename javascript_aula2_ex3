@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var idade = Number(prompt('Digite a idade:'))
+    var preco = Number(prompt('Digite o preco:'))
+    var preco_desc = preco * 0.9
+    if(idade < 18){
+      alert(`Desconto de 10% total R$ ${preco_desc.toFixed(2)}`)
+    }else {
+      alert(`Sem desconto, bvalor R$ ${preco}`)
+    }
+    
+
+  </script>
+  
+</body>
+</html>
