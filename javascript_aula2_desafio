@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var option = Number(prompt('Digite a opção: 1 Calcular Area do triângulo, 2 Calcular Area do retângulo, 3 Calcular Area do cubo, 4 Calcular Area do circulo'))
+    switch(option){
+      case 1:
+        var height = Number(prompt('Qual é a altura do triangulo'))
+        var base = Number(prompt('Qual é a base do triangulo'))
+        alert(`a área é de ${height * base}`)
+        break
+      case 2:
+        var height = Number(prompt('Qual é a altura do retângulo'))
+        var base = Number(prompt('Qual é a base do retângulo'))
+        alert(`a área é de ${height * base}`)
+        break
+      case 3:
+        var height = Number(prompt('Qual é o lado do cubo'))        
+        alert(`a área é de ${(height * height)* 6}`)
+        break
+      case 4:
+        var radius = Number(prompt('Qual é o lado do cubo'))        
+        alert(`a área é de ${3.1421 * radius**2}`)
+        break
+    }
+  </script>  
+</body>
+</html>
