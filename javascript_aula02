@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        label, input {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora IMC</h1>
+    <form action="">
+        <label for="">Coloque a sua altura</label>
+        <input type="number" id="height"><br>
+        <label for="">Coloque o seu peso em kilos</label>
+        <input type="number" id="weight"><br><br><br>
+        <button onclick="imc()">Calcular</button>
+        <p>Seu resultado foi <span></span></p>
+    </form>
+   
+    
+
+
+    <script>
+        /*Menor que 16: Baixo peso muito grave
+De 16 a 16.99: Baixo peso grave
+De 17 a 18.49: Baixo peso
+De 18.50 a 24.99: Peso normal
+De 25 a 29.99: Sobrepeso
+De 30 a 34.99: Obesidade grau I
+De 35 a 39.99: Obesidade grau II
+Maior ou igual a 40: Obesidade grau III*/
+
+        function imc(){
+        var height_input = document.getElementById('height')
+        var height = Number(height_input.value)
+
+        var weight_input = document.getElementById('weight')
+        var weight = Number(weight_input.value)
+
+        var imc = weight / height**2
+
+        if(imc <= 16.99){
+            imc1 = 'Baixo peso grave'
+        }else if (imc <= 18.49){
+            imc1 = 'Baixo peso'
+        }else if(imc <= 24.99){
+            imc1 = 'Peso normal'
+        }else if (imc <= 29.99){
+            imc1 = 'Sobrepeso'
+        }else if (imc <= 34.99){
+            imc1 = 'Obesidade grau I'
+        }else if (imc <= 39.99) {
+            imc1 = 'Obesidade grau II'
+        }else {
+            imc1 = 'Obesidade grau III'
+        }
+
+        var result = document.querySelector('span')
+        result.innerText = imc1
+    }
+        
+        
+    
+
+    </script>
+    
+</body>
+</html>
