@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var counter = 1;
+        total = 0
+        
+        while(counter <= 5){
+            var num = Number(prompt(`Digite a idade da pessoa ${counter}`))
+            counter++
+            total += num
+        }
+        var average = total / 5
+        alert(`A média foi de ${average.toFixed(1)}`)
+        if (average <= 25){
+            alert('População jovem')
+        }else if (average <= 60){
+            alert('População adulta')
+        }else {
+            alert('População idosa')
+        }
+    </script>
+    
+</body>
+</html>
