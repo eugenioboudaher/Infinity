@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        while (true){
+            var grade_01 = Number(prompt('Digite a primeira nota'));
+            var grade_02 = Number(prompt('Digite a segunda nota'));
+            var grade_03 = Number(prompt('Digite a terceira nota'));
+            var average = (grade_01 + grade_02 + grade_03) / 3;
+            alert(`Sua média foi de ${average.toFixed(1)}`);
+            var options = Number(prompt('Digite 1 para continuar e 2 para sair'));
+            if (options === 1){
+                continue;
+            } else {
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
