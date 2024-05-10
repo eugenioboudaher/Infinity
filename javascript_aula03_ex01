@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem regressiva</title>
+    <style>
+        body {
+            font-size: 1.8em;
+            background-color: darkgray;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        input {
+            height: 60px;
+            width: 270px;
+            font-size: 0.6em;
+            border-radius: 10px;
+            font-weight: bolder;
+        }
+        button {
+            height: 50px;
+            margin-top: 20px;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador regressivo</h1>
+    <form action="">
+        <input type="number" id="num_input" placeholder="Coloque o número para contar">
+    </form>
+    <button onclick="regressive_counter()">Contar</button>
+    <div id="result"></div>
+
+    <script>
+        function regressive_counter (){
+            var num_input = document.getElementById('num_input');
+            var num = Number(num_input.value);
+            var result_div = document.getElementById('result');
+            
+            result_div.innerHTML = '';
+            
+            while (num >= 0){
+                result_div.innerHTML += num + '<br>';
+                num--;
+            }
+        }
+    </script>
+    
+</body>
+</html>
