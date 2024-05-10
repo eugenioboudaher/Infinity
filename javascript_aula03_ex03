@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var total = 0
+        while (true){
+            var num = Number(prompt('Digite um numero'))
+            total += num
+            alert(`A soma é de ${total}`)
+            var options = Number(prompt('Digite 1 para continuar e 0 para parar'))
+            if (options == 0){
+                break
+            }
+        }
+    </script>
+    
+</body>
+</html>
