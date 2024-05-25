@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Números</title>
+</head>
+<style>
+    #num {
+        font-size: 2em;
+    }
+</style>
+<body>
+    
+    <div id="num"></div>
+
+    <script>
+        let div_letter = document.querySelector('#num');
+        let word = prompt('Digite a palavra');
+        for (letter of word){
+            if ('aeiou'.includes(letter)){
+                continue
+            }else {
+                let div_elements = document.createElement('p');
+                div_elements.textContent = letter;
+                div_letter.appendChild(div_elements)
+            }
+            
+
+        }
+
+
+    </script>
+
+</body>
+</html>
