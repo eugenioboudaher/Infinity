@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num_alunos = Number(prompt('Digite o numero de alunos:'))
+        var total = 0
+        var loop = 0
+        var maior = 0
+        while (num_alunos >= 1){
+            var nota = Number(prompt('Qual a nota do aluno'))
+            if (loop == 0){
+                maior = nota
+            }else {
+                if(nota > maior){
+                    maior = nota
+                }
+            }
+            total += nota
+            num_alunos -= 1
+            loop += 1
+        }
+        var media = total / loop
+        alert(`O maior é ${maior} e a média é ${media.toFixed(1)}`)
+    </script>
+    
+</body>
+</html>
