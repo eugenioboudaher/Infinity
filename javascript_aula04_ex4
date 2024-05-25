@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Números</title>
+</head>
+<style>
+    #num {
+        font-size: 2em;
+    }
+</style>
+<body>
+    
+    <div id="num"></div>
+
+    <script>
+        let num_div = document.getElementById('num');
+        let tab = Number(prompt('Digite o numero'))
+
+        var array = []
+        for (i = 1; i <= tab; i++){
+            if (tab % i == 0){
+                array.push(i)
+            }
+        }
+        if (array.length == 2){
+            num_div.textContent = 'Primo'
+        }else {
+            num_div.textContent = 'Não Primo'
+        }
+
+    </script>
+
+</body>
+</html>
