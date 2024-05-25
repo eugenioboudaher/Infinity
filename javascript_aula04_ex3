@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Números</title>
+</head>
+<body>
+    <h1>Lista de Números</h1>
+    <div id="num"></div>
+
+    <script>
+        let num_div = document.getElementById('num');
+        let tab = Number(prompt('Digite a contagem regressiva'))
+
+        for (i = tab; i >= 0; i--){
+            let num_elements = document.createElement('p');
+            num_elements.textContent = 'Número ' + i;
+            num_div.appendChild(num_elements)
+        }
+
+    </script>
+
+</body>
+</html>
