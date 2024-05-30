@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let alunos = Number(prompt('Quantos alunos deseja inserir as notas'))  
+    let total = 0
+    let maior = 0
+    let menor = Number.MAX_SAFE_INTEGER;
+    var nota = []
+    let cont = 0      
+    while (alunos > 0){
+    let notas = Number(prompt(`Digite a notas do aluno numero ${cont + 1}`))
+    if (notas){
+      nota.push(notas)
+    }
+    alunos--
+    cont++
+    total += notas
+    if (cont == maior == menor)
+    {maior = 0
+
+    }else {
+      if
+        (notas > maior){
+          maior = notas
+        }
+        if (notas <  menor){
+          menor = notas
+        }
+      
+    }
+  }  
+    let media = total / Number(nota.length)
+    alert(`Consgui a média ${media.toFixed(2)}`)
+    alert(`A maior nota foi ${maior}`)
+    alert(`A menor nota foi ${menor}`)
+    
+
+  
+  </script>
+</body>
+</html>
+      
