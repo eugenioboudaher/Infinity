@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, green, lightgreen);
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+            text-shadow: 2px 2px 3px black;
+        }
+        h1 {
+            text-align: center;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+           
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            background-color: darkgreen;
+            height: 200px;
+            width: 300px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            box-shadow: 0 0 5px 5px;
+            padding: 20px;
+        }
+        label{ 
+            margin-bottom: 20px;
+        }
+        input {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p{
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contador de vogais</h1>
+    </header>
+    <main>
+        <section>
+            <label for="">Digite a palavra para contar as vogais</label>
+            <input type="text" id="input_word" placeholder="palavra">
+            <button onclick="resultado()">Resultado</button>
+            <p id="resdult">0</p>
+        </section>
+    </main>
+
+    <script>
+        function resultado(){
+            count = 0
+            let palavra = document.querySelector('#input_word').value
+            for (let letter of palavra){
+                if('aeiou'.includes(letter)){
+                    count++
+                }
+            }
+            document.querySelector('#resdult').textContent = count
+        }
+
+    </script>
+
+
+    
+</body>
+</html>
