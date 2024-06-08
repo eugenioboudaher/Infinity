@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Número Primo</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;            
+        }
+        h1 {
+            text-align: center;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        input {
+            border-radius: 5px;
+            border: none;
+            height: 50px;
+            font-size: 2em;
+            width: 100px;
+            text-align: center;
+        }
+        button {
+            padding: 10px;
+            background-color: rgb(46, 46, 46);
+            color: white;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(66, 66, 66);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificador de Número Primo</h1>
+    </header>
+    <main>
+        <section>
+            <label for="input_number">Digite o número para verificar se é primo</label>
+            <input type="number" id="input_number" placeholder="0">
+            <button onclick="calcular()">Calcular</button>
+            <p id="result">Resultado</p>
+        </section>
+    </main>
+    <script>
+        function calcular(){
+            let numero = Number(document.querySelector('#input_number').value);
+            if (numero <= 1) {
+                document.querySelector('#result').textContent = 'Não Primo';
+                return;
+            }
+            let div = [];
+            for (let i = 1; i <= numero; i++){
+                if(numero % i === 0){
+                    div.push(i);
+                }
+            }
+            if (div.length === 2){
+                document.querySelector('#result').textContent = 'Primo';
+            } else {
+                document.querySelector('#result').textContent = 'Não Primo';
+            }
+        }
+    </script>
+</body>
+</html>
