@@ -93,7 +93,7 @@
       const inputNumber = parseInt(document.querySelector('#input_number').value);
       if (isNaN(inputNumber) || inputNumber <= 0) {
         document.querySelector('#result2').textContent = 'Por favor, insira um número inteiro positivo.';
-        return; // Exit the function if input is invalid
+        return; 
       }
 
       for (let i = 2; i < inputNumber; i++) {
@@ -103,7 +103,7 @@
         currentNumber = nextNumber;
       }
 
-      // Display the Fibonacci sequence in the result2 paragraph
+
       document.querySelector('#result2').textContent = `A sequência de Fibonacci até ${inputNumber} é: ${result.join(', ')}`;
     }
   </script>
