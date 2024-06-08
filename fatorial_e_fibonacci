@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Fatorial e Fibonacci</title>
+  <style>
+            body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: black;
+            color: white;
+            
+        }
+        h1 {
+            text-align: center;
+            font-weight: lighter;
+
+        }    
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+        }
+        main {
+            background-color: rgb(32, 31, 31);
+            height: 300px;
+            width: 400px;
+            padding: 50px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 0 10px 3px;
+
+        }
+        input {
+            margin-top: 20px;
+            height: 40px;
+            width: 60px;
+            text-align: center;
+            font-size: 2em;
+        }
+        button {
+            margin: 10px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            width: 100px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 1px;
+        }
+
+        button:hover {
+            background-color: rgb(55, 54, 54);
+        }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Calculadora Fatorial e Fibonacci</h1>
+  </header>
+  <section>
+    <main>
+      <label for="input_number">Insira o numero desejado</label><br>
+      <input type="number" name="input_number" id="input_number" placeholder="0">
+      <p>Digite a opção desejada</p>
+      <div>
+        <button onclick="fatorial()">Fatorial</button>
+        <button onclick="fibonacci()">Fibonacci</button>
+      </div>
+      <p id="result"></p>
+      <p id="result2"></p>
+      <p>Dê refresh na página para utilizar novamente</p>
+    </main>
+  </section>
+  <script>
+    function fatorial() {
+        let total = 1
+        input_number = document.querySelector('#input_number').value
+        for (i = 1; i <= input_number; i++){
+            total *= i;
+            document.querySelector('#result').textContent = `O fatorial de ${input_number} é de ${total}`
+            }
+        }
+
+    
+
+    function fibonacci() {
+      let previousNumber = 0;
+      let currentNumber = 1;
+      const result = [previousNumber, currentNumber];
+
+      const inputNumber = parseInt(document.querySelector('#input_number').value);
+      if (isNaN(inputNumber) || inputNumber <= 0) {
+        document.querySelector('#result2').textContent = 'Por favor, insira um número inteiro positivo.';
+        return; // Exit the function if input is invalid
+      }
+
+      for (let i = 2; i < inputNumber; i++) {
+        const nextNumber = previousNumber + currentNumber;
+        result.push(nextNumber);
+        previousNumber = currentNumber;
+        currentNumber = nextNumber;
+      }
+
+      // Display the Fibonacci sequence in the result2 paragraph
+      document.querySelector('#result2').textContent = `A sequência de Fibonacci até ${inputNumber} é: ${result.join(', ')}`;
+    }
+  </script>
+</body>
+</html>
