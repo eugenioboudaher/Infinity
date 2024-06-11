@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar vogais</title>
+    <style>
+        body {
+            color: white;
+            background-color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: lighter;
+        }
+        h1 {
+            font-weight: lighter;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+
+        section {
+            background-color: rgb(38, 38, 38);
+            height: 200px;
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            border-radius: 25px;
+            box-shadow: 0 0 5px 5px;
+        }
+        input {
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            border-radius: 5px;
+            padding: 5px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contador de vogais</h1>
+    </header>
+    <main>
+        <section>
+            <label for="input_word">Digite a palavra</label>
+            <input type="text" id="input_word">
+            <button onclick="calcular()">Analisar</button>
+            <p id="result">Resultado</p>
+        </section>
+    </main>
+    <script>
+        function calcular(){
+            let word = document.querySelector('#input_word').value
+            counter = 0
+            for (letter of word){
+                if ('aeiou'.includes(letter)){
+                    counter++
+                }
+            }
+            document.querySelector('#result').textContent = `A palavra tem ${counter} vogais`
+        }
+    </script>
+</body>
+</html>
