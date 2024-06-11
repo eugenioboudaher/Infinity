@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: lighter;
+        }
+        h1 {
+            text-align: center;
+            font-weight: lighter;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        section {
+            height: 200px;
+            width: 400px;
+            background-color: rgb(54, 54, 54);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 25px;
+            box-shadow: 0 0 5px 5px white;
+        }
+
+        input {
+            border-radius: 5px;
+            box-shadow: 0 0 3px 5px white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculadora de multiplicar</h1>
+    </header>
+    <main>
+        <section>
+            <label for="input_number1">Digite o primeiro número</label>
+            <input type="number" id="input_number1">
+            <label for="input_number2">Digite o segundo número</label>
+            <input type="number" id="input_number2">
+            <button onclick="calcular()">Calcular</button>
+            <p id="result">Resultado</p>
+        </section>
+    </main>
+    <script>
+        function calcular(){
+            let input_number1 = document.querySelector('#input_number1').value
+            let input_number2 = document.querySelector('#input_number2').value
+            let result = input_number1 * input_number2
+            document.querySelector('#result').textContent = result.toFixed(2)
+
+        }
+    </script>
+</body>
+</html>
