@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { 
+            background-image: url(https://www.10wallpaper.com/wallpaper/medium/1107/Window_pastoral-the_worlds_high-definition_nature_photography_medium.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            font-weight: lighter;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+
+        }
+        section {
+            height: 200px;
+            width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+            flex-direction: column; 
+            gap: 10px; 
+            border-radius: 25px;  
+            background-color: rgba(0, 0, 0, 0.282);   
+        }
+        input , button {
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            padding: 5px 5px 5px 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conversor de temperatura</h1>
+    </header>
+    <main>
+        <section>
+
+                <label for="input_temp">Digite a temperatura em farenheit</label>
+                <input type="number" name="input_temp" id="input_temp">
+                <button id="calculate">Calcular</button>
+                <p>Resultado</p>
+
+        </section>
+    </main>
+    <script>
+            let $button = document.querySelector('#calculate')
+            $button.addEventListener('click', () => {
+                const f = document.querySelector('#input_temp').value
+                const c = (f - 32) * 5/9
+                document.querySelector('p').textContent = `A temperatura é ${c.toFixed(2)} C`
+            })
+    </script>
+    
+</body>
+</html>
