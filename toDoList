@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do lisst</title>
+    <style>
+        html, body {
+            width: 50%;
+            margin: 0 auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;            
+        }
+        .container {
+            width: 400px;
+        }
+        #inputField {
+            width: 300px;
+            height: 40px;
+            border: 1px solid black;
+            outline: none;
+            font-size: 2em;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        #addToDo {
+            height: 40px;
+            width: 40px;
+            border: 1px solid black;
+            vertical-align: middle;
+            font-size: 30px;
+        }
+        .doDos {
+            margin-top: 25px;
+        }
+        .paragraphStyling {
+            margin: 0;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 20px;
+
+        }
+     
+    </style>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <div class="container">
+        <input type="text" id="inputField" placeholder="Digite a tarefa"><button id="addToDo">+</button>
+        <div class="toDos" id="toDoContainer">            
+        </div>
+    </div>
+    <script>
+        let addToDoButton = document.querySelector('#addToDo');
+        let toDoContainer = document.querySelector('#toDoContainer')
+        addToDoButton.addEventListener('click', () => {
+            inputField = document.querySelector('#inputField');
+            let paragraph = document.createElement('p');
+            paragraph.classList.add('paragraphStyling')
+            paragraph.textContent = inputField.value;
+            toDoContainer.appendChild(paragraph);
+            inputField.value = ''
+            paragraph.addEventListener('click',() => {
+                paragraph.style.textDecoration = 'line-through'
+            })
+            paragraph.addEventListener('dblclick',() => {
+                toDoContainer.removeChild(paragraph)
+            })
+        })
+    </script>
+</body>
+</html>
