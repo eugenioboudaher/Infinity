@@ -61,7 +61,13 @@
     </section>
   </main>
   <script>
-    let button 
+    let button = document.querySelector('#calculate');
+
+    button.addEventListener('click', () => {
+      let number = document.querySelector('#input_number').value;
+      let result = number ** 3
+      document.querySelector('#result').textContent = result
+    })
   </script>
   
 </body>
