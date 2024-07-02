@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: black;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: aliceblue;
+    }
+    main {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: linear-gradient(45deg, black, gray);
+      width: 400px;
+      height: 300px;
+      border-radius: 25px;
+      box-shadow: 0px 0px 10px yellow;
+    }
+    input, label {
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 5px;
+      color: white;
+      background-color: black;
+      border-radius: 10px;
+    }
+    button:hover {
+      background-color: rgb(68, 68, 68);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div>
+      <h1>Calculadora IMC</h1>
+      <label for="ipeso">Digite o peso</label>
+      <input type="number" name="peso" id="ipeso">
+      <label for="ialtura">Digite a altura</label>
+      <input type="number" name="altura" id="ialtura">
+      <button id="inputButton">Calcular</button>
+      <p id="result">Resultado</p>
+    </div>
+  </main>
+  <script>
+    let button = document.getElementById('inputButton')
+
+    button.addEventListener('click', () => {
+      let peso = document.getElementById('ipeso').value
+      let altura = document.getElementById('ialtura').value
+      let resultCalculus = peso/altura**2
+      document.getElementById('result').textContent = `O resultado foi de ${resultCalculus.toFixed(2)}`
+
+    })
+  </script>
+</body>
+</html>
