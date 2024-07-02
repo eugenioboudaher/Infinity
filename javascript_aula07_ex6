@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function operacoesMatematicas(numero1, numero2, callback) {
+        return callback(numero1, numero2);
+    }
+
+    const resultadoSoma = operacoesMatematicas(5, 3, (num1, num2) => num1 + num2);
+    let elemento = document.createElement('p');
+    elemento.textContent = resultadoSoma;
+    document.body.appendChild(elemento);
+
+    const resultadoSubtracao = operacoesMatematicas(5, 3, (num1, num2) => num1 - num2);
+    let elemento1 = document.createElement('p');
+    elemento1.textContent = resultadoSubtracao;
+    document.body.appendChild(elemento1);
+
+    const resultadoMultiplicacao = operacoesMatematicas(5, 3, (num1, num2) => num1 * num2);
+    let elemento2 = document.createElement('p');
+    elemento2.textContent = resultadoMultiplicacao;
+    document.body.appendChild(elemento2);
+
+    const resultadoDivisao = operacoesMatematicas(5, 2, (num1, num2) => num1 / num2);
+    let elemento3 = document.createElement('p');
+    elemento3.textContent = resultadoDivisao;
+    document.body.appendChild(elemento3);
+
+
+  </script>
+</body>
+</html>
