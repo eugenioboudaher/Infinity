@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      background-image: linear-gradient(45deg, black, gray);
+      height: 300px;
+      width: 500px;
+      border-radius: 45px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div>
+      <h1>Verificador de senha</h1>
+      <input type="text" id="inputName" placeholder="Inserir Nome">
+      <input type="password" id="inputPassword" placeholder="Inserir Senha">
+      <button id="inputButton">Verificar</button>
+      <p>Resultado</p>
+    </div>
+  </main>
+  <script>
+    let name = 'eugenio'
+    let password = 123
+    let button = document.getElementById('inputButton');
+    button.addEventListener('click', ()=> {
+      let inputName = document.getElementById('inputName').value
+      let inputPass = document.getElementById('inputPassword').value
+      if(inputName == name && inputPass == password){
+        document.querySelector('p').textContent = 'Verificação com sucesso'
+      }else {
+        document.querySelector('p').textContent = 'Verificação sem sucesso'
+      }
+    })
+  </script>
+  
+</body>
+</html>
