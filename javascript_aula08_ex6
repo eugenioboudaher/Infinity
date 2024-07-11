@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li id="text">Texto antigo</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <button>Clique</button>
+
+  <script>
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+      const text = document.getElementById('text');
+      if (text.textContent === 'Texto antigo'){
+        text.textContent = 'Novo texto'
+      } else {
+        text.textContent = 'Texto antigo'
+      }
+    })
+
+  </script>
+  
+</body>
+</html>
