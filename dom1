@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Unidades</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: black;
+        }
+        div {
+            background-color: #2f2f2f;
+            height: 300px;
+            width: 600px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 25px;
+            box-shadow: 0 0 10px white;
+        }
+
+        input {
+            height: 20px;
+            border-radius: 10px;
+        }
+        select {
+            padding: 5px;
+            font-weight: bolder;
+            border-radius: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Conversor de medidas</h1>
+    <div>
+        <label for="inputValue">Insira o valor:</label>
+        <input type="number" id="inputValue" placeholder="Digite o valor">
+        <label for="unitSelection">Escolha a unidade:</label>
+        <select name="" id="unitSelection">
+            <option value="yards">Jardas</option>
+            <option value="inches">Polegadas</option>
+            <option value="miles">Milhas</option>
+        </select>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        let inputValue = document.getElementById('inputValue');
+        let unitSelection = document.getElementById('unitSelection');
+        let result = document.getElementById('result');
+
+        function convert() {
+            let value = parseFloat(inputValue.value);
+            let convertedValue;
+
+            switch (unitSelection.value) {
+                case 'yards':
+                    convertedValue = value * 0.9144; 
+                    result.textContent = `${value} jardas = ${convertedValue.toFixed(2)} metros`;
+                    break;
+                case 'inches':
+                    convertedValue = value * 0.0254; 
+                    result.textContent = `${value} polegadas = ${convertedValue.toFixed(2)} metros`;
+                    break;
+                case 'miles':
+                    convertedValue = value * 1609.34; 
+                    result.textContent = `${value} milhas = ${convertedValue.toFixed(2)} metros`;
+                    break;
+                default:
+                    result.textContent = "Selecione uma unidade válida.";
+            }
+        }
+
+
+        inputValue.addEventListener('input', convert);
+        unitSelection.addEventListener('change', convert);
+    </script>
+</body>
+</html>
