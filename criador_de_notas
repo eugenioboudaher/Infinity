@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        main { 
+            max-height: 1000vh;            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 200px;
+        }
+        #container {
+            height: 200px;
+            width: 400px;
+            background-image: linear-gradient(45deg, black, gray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            padding: 10px;
+            position: relative;
+            top: 5px;
+            border-radius: 25px;
+        }
+        .newDiv {
+            background-image: linear-gradient(45deg, black, gray);
+            width: 400px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px; 
+            padding: 10px;
+            color: white;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Criador de Notas</h1>
+    <main>
+        <div id="container">
+            <label for="inputText">Digite sua nota</label>
+            <input type="text" name="" id="inputText">
+            <button id="inputButton">Adicionar</button>
+        </div>
+    </main>
+    <script>
+        let button = document.querySelector('#inputButton');
+        button.addEventListener('click', () => {
+            let main = document.querySelector('main');
+            let inputText = document.querySelector('#inputText');
+            let input = inputText.value;
+
+            if (input.trim() !== "") { 
+                let newDiv = document.createElement('div');
+                let botao = document.createElement('button')
+                botao.textContent = 'apagar'
+                newDiv.classList.add('newDiv');
+                newDiv.textContent = input; 
+
+                main.appendChild(newDiv);
+                newDiv.appendChild(botao);
+                botao.addEventListener('click', () => {
+                    main.removeChild(newDiv)
+                })
+                inputText.value = ""; 
+            }
+        });
+    </script>
+</body>
+</html>
