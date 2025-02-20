@@ -1,0 +1,3 @@
+listaDeFrutas = ['laranja', 'limão', 'abacaxi', 'maçã', 'melancia', 'abacate' ]
+tuplaDeFrutas = tuple(listaDeFrutas)
+print(tuplaDeFrutas)
