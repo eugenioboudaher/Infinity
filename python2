@@ -1,0 +1,6 @@
+dicionario = {}
+dicionario['nome'] = str(input('Digite seu nome: '))
+dicionario['telefone'] = str(input('Digite seu telefone: '))
+dicionario['eMail'] = str(input('Digite seu Email: '))
+
+print(f"Nome: {dicionario['nome']} Telefone: {dicionario['telefone']} Email: {dicionario['eMail']}")
