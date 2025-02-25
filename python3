@@ -1,0 +1,12 @@
+lista = []
+dicionario = {}
+for i in range(5):
+    dicionario['nome'] = str(input('Digite o nome do produto: '))
+    dicionario['preco'] = float(input('Digite seu preço: '))
+    lista.append(dicionario)
+
+total = 0
+for i in lista:
+    total += i['preco']
+
+print(total)
