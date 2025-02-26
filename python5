@@ -1,0 +1,9 @@
+def maior(*args):
+    maior = args[0]
+    for i in args:
+        if i > maior:
+            maior = i
+    return maior
+
+
+print(maior(1, 5, 3))
