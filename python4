@@ -1,0 +1,5 @@
+def media(bim1, bim2, bim3):
+    calcMedia = (bim1 + bim2 + bim3)/3
+    return f'{calcMedia:.1f}'
+    
+print(media(1, 2, 3))
