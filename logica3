@@ -1,0 +1,11 @@
+number = 7
+cont = 1
+while cont <= 3:
+    print('Tente adivinhar o número de 1 a 10, você tem 3 chances')
+    numberGuess = int(input('Digite o númro desejado: '))
+    cont += 1
+    if numberGuess == 7:
+        print('Parabéns, você acertou')
+        break
+    else:
+        print('Desculpa, você errou')
