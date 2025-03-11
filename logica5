@@ -1,0 +1,12 @@
+soma = 0
+
+for i in range(3):
+    nota = float(input(f'Digite a nota {i + 1}: '))
+    soma += nota
+    
+media = soma / 3
+
+if media < 7:
+    print(f'A media final foi {media} e o aluno está reprovado')
+else:
+    print(f'A media final foi {media} e o aluno está aprovado')
