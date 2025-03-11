@@ -1,0 +1,7 @@
+start = int(input('Digite o início do intervalor: '))
+end = int(input('Digite o fim do intervalor: '))
+soma = 0
+for i in range(start, end + 1):
+    if i % 2 == 0:
+        soma += i
+print(f'A soma dos números pares no intervalo entre {start} e {end} é {soma}')
