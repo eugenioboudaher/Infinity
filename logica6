@@ -1,0 +1,14 @@
+contador = 0
+nome = 'eugenio'
+senha = 123
+
+while contador <= 2:
+    nameUser = str(input('Digite o seu nome: '))
+    passwordUser = int(input('Digite a sua senha: '))
+    if nameUser == nome and passwordUser == senha:
+        print('Acesso permitido')
+        break
+    else:
+        print('Acesso negado')
+        contador+= 1
+        continue
