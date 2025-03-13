@@ -1,0 +1,62 @@
+def acrescentaTarefa():
+    global id  
+    id += 1 
+    task = {}  
+    task['id'] = id
+    task['Tarefa'] = input('Digite a tarefa: ')
+    task['Prioridade'] = input('Digite a prioridade, de 1 a 5: ')
+    task['Dia'] = input('Digite o dia da semana: ')
+    task['Categoria'] = input('Digite a categoria (lazer ou trabalho): ')
+    taskList.append(task)  
+
+def editar(taskList):
+    editOption = int(input('Digite o id da tafefa a ser editada:  '))
+    for i in range(len(taskList)):
+        if taskList[i]['id'] == editOption:
+            taskList[i]['Tarefa'] = input('Digite a tarefa: ')
+            taskList[i]['Prioridade'] = input('Digite a prioridade, de 1 a 5: ')
+            taskList[i]['Dia'] = input('Digite o dia da semana: ')
+            taskList[i]['Categoria'] = input('Digite a categoria (lazer ou trabalho): ')
+
+def deletar():
+    deleteOption = int(input('Digite o id da tafefa a ser deletada:  '))
+    for i in range(len(taskList)):
+        if taskList[i]['id'] == deleteOption:
+            taskList.remove(taskList[i])
+
+
+taskList = []
+id = 0  
+
+while True:
+    print('''To Do List
+          Menu
+          1 - Acrescentar Tarefa
+          2 - Editar tarefa
+          3 - Deletar tarefa
+          4 - Listar tarefas
+          5 - Sair''')
+
+    try:
+        option = int(input('Digite a opção desejada: '))
+    except ValueError:
+        print("Por favor, digite um número válido!")
+        continue
+
+    match option:
+        case 1:
+            acrescentaTarefa()            
+        case 2:
+            editar(taskList)
+        case 3:
+            deletar()
+        case 4:
+            print("\nLista de Tarefas:")
+            for tarefa in taskList:
+                print(tarefa)
+            print("\n")
+        case 5:
+            print("Saindo...")
+            break
+        case _:
+            print("Opção inválida! Escolha uma opção entre 1 e 5.")
