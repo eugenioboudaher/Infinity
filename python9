@@ -1,0 +1,30 @@
+import flet as ft
+
+
+
+def main (page: ft.Page):
+    def enviar(e):
+        nomeInfo = nome.value
+        emailInfo = email.value
+        msgInfo = comentario.value
+
+        if nomeInfo and emailInfo and msgInfo:
+            mensagem_confirmacao.value = f"✅ Formulário enviado com sucesso!\n\n" \
+                                         f"Nome: {nomeInfo}\n" \
+                                         f"Email: {emailInfo}\n" \
+                                         f"Mensagem: {msgInfo}"
+            nome.value = email.value = comentario.value = ""
+        page.update()
+
+    titulo = ft.Text('Admission Form', size=32)
+    nome = ft.TextField(label='Nome completo')
+    email = ft.TextField(label='E mail')
+    comentario = ft.TextField(label='Nos mande uma mensagem')
+    button = ft.Button(text='Enviar', on_click=enviar)
+    mensagem_confirmacao = ft.Text('', size=16, color="green") 
+    page.add(titulo, nome, email, comentario, button, mensagem_confirmacao)
+
+
+
+
+ft.app(target=main)
