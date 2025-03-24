@@ -1,0 +1,24 @@
+class Animal:
+    def __init__(self, nome):
+        self.nome = nome
+    
+    def falar (self):
+        print('Emite som')
+
+
+class Cachorro(Animal):
+
+    def falar(self):
+        print('O cachorro late')
+
+
+class Gato(Animal):
+
+    def falar(self):
+        print('O gato mia')
+
+cachorro = Cachorro('Totó')
+cachorro.falar()
+
+gato = Gato('Totó')
+gato.falar()
